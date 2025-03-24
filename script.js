@@ -1,27 +1,7 @@
-window.requestAnimFrame = (function () {
-    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
-        function (cb) {
-            window.setTimeout(cb, 1000 / 60);
-        };
-})();
+window.requestAnimFrame = function (cb) {
+    window.setTimeout(cb, 1000 / 60);
+};
 
-let lastTime = 0;
-
-function gameLoop(currentTime) {
-    const deltaTime = (currentTime - lastTime) / 10000;
-    lastTime = currentTime;
-
-    a1b3c.y8 += a1b3c.v1y * deltaTime * 60;
-    a1b3c.v1y += g3v6x * deltaTime * 60;
-
-    z8k4p.clearRect(0, 0, w9x1t, h5j7r);
-    a1b3c.r8n();
-    b6f2j.r8n();
-
-    requestAnimFrame(gameLoop);
-}
-
-requestAnimFrame(gameLoop);
 
 var q3m2v = document.getElementById('q3m2v'),
     z8k4p = q3m2v.getContext('2d');
