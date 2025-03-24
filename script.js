@@ -14,7 +14,6 @@ function gameLoop(currentTime) {
     a1b3c.y8 += a1b3c.v1y * deltaTime * 60;
     a1b3c.v1y += g3v6x * deltaTime * 60;
 
-    // Очистка и отрисовка
     z8k4p.clearRect(0, 0, w9x1t, h5j7r);
     a1b3c.r8n();
     b6f2j.r8n();
